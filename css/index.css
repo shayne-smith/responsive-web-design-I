@@ -1,3 +1,282 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+body {
+	text-align: center;
+}
+
+.container {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.navigation {
+    margin-bottom: 1%;
+}
+
+nav {
+	display: inline-block;
+	width: 75%;
+	vertical-align: 63%;
+	margin-right: 4%;
+}
+
+nav a {
+	color: grey;
+	text-decoration: none;
+	margin: 0 4%;
+	display: inline-block;
+}
+
+.logo {
+	margin-top: 3%;
+}
+
+header {
+	margin: 6.5% 0;
+}
+
+.title {
+	display: inline-block;
+	margin: 0 10%;
+	vertical-align: 155%;
+}
+
+h1 {
+	font-size: 80px;
+}
+
+h2 {
+	display: inline-block;
+}
+
+.button {
+	border: 1px solid black;
+	padding: 2% 15%;
+	display: inline-block;
+}
+
+.section1 {
+	border-top: 2px solid black;
+	padding: 3% 0;
+	text-align: left;
+}
+
+.features {
+	max-width: 49%;
+	display: inline-block;
+	text-align: left;
+	margin-right: 1%;
+}
+
+.about {
+	max-width: 49%;
+	display: inline-block;
+	text-align: left;
+}
+
+.middle-img {
+	width: 100%;
+}
+
+.section2 {
+	padding: 4% 0;
+}
+
+.services {
+	display: inline-block;
+	text-align: left;
+	max-width: 32%;
+	margin-right: 1%;
+}
+
+.product {
+	display: inline-block;
+	text-align: left;
+	max-width: 32%;
+	margin-right: 1%;
+}
+
+.vision {
+	display: inline-block;
+	text-align: left;
+	max-width: 32%;
+}
+
+.contact {
+	border-top: 2px solid black;
+	padding: 3% 0;
+	text-align: left;
+}
+
+#phone {
+	line-height: 3;
+}
+
+footer {
+	padding-bottom: 8%;
+}
+
+/* 800px media queries for tablet devices */
+@media (max-width: 800px) {
+    .logo {
+        max-width: 10rem;
+        margin-bottom: 2.2rem;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+    nav a {
+        margin: 0;
+    }
+    header {
+        margin: 6.5% 0 8% 0;
+    }
+    header img {
+        display: none;
+    }
+    .section1 {
+        padding: 4.5% 0 3% 0;
+    }
+}
+
+
+/* 500px media queries for mobile devices */
+@media (max-width: 500px) {
+    .container {
+        max-width: 100%;
+    }
+    .logo {
+        margin: 1.0rem; 
+        max-width: 7rem;
+    }
+    .navigation {
+        margin-bottom: 3rem;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+    nav a {
+        width: 100%;
+        border-top: 1px solid black;
+        padding: 1.0rem;
+    }
+    nav a:last-child {
+        border-bottom: 1px solid black;
+    }
+    .section1 {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .section1 div {
+        max-width: 100%;
+        margin: 1.5rem 0;
+    }
+    .middle-img {
+        margin: 1rem 0;
+    }
+    .section2 {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section2 div {
+        max-width: 100%;
+    }
+    .services {
+        margin-right: 0;
+        margin-bottom: 3.5rem;
+    }
+    .product {
+        margin-right: 0;
+        margin-bottom: 3.5rem;
+    }
+    .vision {
+        margin-bottom: 1rem;
+    }
+    .contact {
+        width:90%;
+        margin: 0 auto;
+        padding: 2rem 0 3rem 0;
+    }
+}
